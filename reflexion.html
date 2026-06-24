@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexión Personal | Portafolio Juan Carlos Feliu Diaz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    .subpage-hero {
+      padding: 8rem 0 4rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="perfil.html">Perfil de Egreso</a></li>
+        <li><a href="camino.html">Camino Académico</a></li>
+        <li><a href="proyecto.html">Proyecto Integrador</a></li>
+        <li><a href="requerimientos.html">Requerimientos y Roles</a></li>
+        <li><a href="foda.html">F.O.D.A</a></li>
+        <li><a href="reflexion.html" class="active">Reflexión</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <h1 class="hero-title" style="font-size:3rem; margin-bottom:1rem;">Reflexión <span class="gradient-text">Personal</span></h1>
+      <p class="section-subtitle" style="margin-bottom:0;">Mi visión final sobre el desarrollo de software y cómo ha madurado mi perspectiva profesional.</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       REFLECTION & CONTACT SECTION
+       ========================================== -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="reflection-layout">
+        <div class="reflection-text reveal-element revealed">
+          <p>
+            Desde el inicio de mi carrera, fui conociendo paso a paso cómo funciona toda la estructura y el manejo de sistemas operativos, su sistema interno <strong>D.O.S (CMD)</strong> y la virtualización, logrando comprender muy bien estas asignaturas.
+          </p>
+          <p>
+            Luego vino el desafío más complejo: <strong>Python</strong>. No solo para mí, sino para muchos compañeros, algunos de los cuales lamentablemente abandonaron la carrera porque les costaba asimilar cómo trabaja el código. Y no los culpo, ya que prácticamente era como aprender un idioma completamente nuevo. Afortunadamente, no me di por vencido. Con mucho esfuerzo y dedicación, logré comprender su funcionamiento mediante <strong>Visual Studio Code</strong> y salir adelante con la asignatura.
+          </p>
+          <p>
+            Posteriormente pasamos a <strong>Bases de Datos</strong>. Si bien al principio representó cierta complejidad, logré dominar la materia en poco tiempo, convirtiendo a <strong>MySQL</strong> en mi principal herramienta de trabajo durante todos los semestres.
+          </p>
+          <p>
+            Al iniciar el segundo año de carrera, cursamos Requerimientos 1 y 2. Aunque no eran asignaturas complejas por su dificultad técnica, demandaban una enorme cantidad de documentación y escritura manual. Sin embargo, la oportuna inclusión de las <strong>Herramientas de IA</strong> nos facilitó enormemente estas tareas, reduciendo tiempos de desarrollo de semanas a días, o incluso horas.
+          </p>
+          <blockquote>
+            "Al final, creo que solo faltaron algunas asignaturas como Bases de Datos No Relacionales, refactorización de código y creación de aplicaciones web, que por limitaciones de tiempo no pudimos ejecutar en profundidad."
+          </blockquote>
+          <p>
+            El paso por todas estas asignaturas cambió por completo mi forma de entender el desarrollo de software. Antes pensaba que la programación era la etapa más importante de un proyecto, pero a medida que avanzaba en la materia, aprendí que un sistema exitoso comienza con una correcta definición de requerimientos. Comprendí la importancia vital de escuchar al cliente, analizar sus necesidades y documentar adecuadamente cada requisito antes de iniciar cualquier desarrollo.
+          </p>
+          <p>
+            Considerando todo lo aprendido a nivel profesional, reconozco que se me entregaron herramientas esenciales para desempeñarme en áreas de análisis de sistemas, gestión de proyectos y desarrollo de software. Todo esto fortaleció mi capacidad para trabajar de manera organizada, documentar procesos y comunicarme eficazmente con clientes y equipos de desarrollo, competencias que serán de gran utilidad en mi futura carrera profesional.
+          </p>
+        </div>
+
+        <!-- Mock Contact Form -->
+        <div class="card-glass contact-card reveal-element">
+          <h3>Contacto Profesional</h3>
+          <p>¿Interesado en mi perfil para oportunidades laborales o proyectos conjuntos? Envíame un mensaje directo.</p>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Nombre Completo</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Escribe tu nombre..." required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Correo Electrónico</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="nombre@correo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Mensaje</label>
+              <textarea id="contact-msg" class="form-control" placeholder="Escribe tu propuesta o mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+
+          <div class="contact-divider">
+            <span>o escríbeme directamente</span>
+          </div>
+          <a href="https://wa.me/56949315061?text=Hola%20Juan%20Carlos%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="camino.html">Camino Académico</a>
+        <a href="proyecto.html">Proyecto</a>
+        <a href="foda.html">F.O.D.A</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Juan Carlos Feliu Diaz. Todos los derechos reservados. Portafolio de Título - Analista Programador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Integrador | Portafolio Juan Carlos Feliu Diaz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    .subpage-hero {
+      padding: 8rem 0 4rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="perfil.html">Perfil de Egreso</a></li>
+        <li><a href="camino.html">Camino Académico</a></li>
+        <li><a href="proyecto.html" class="active">Proyecto Integrador</a></li>
+        <li><a href="requerimientos.html">Requerimientos y Roles</a></li>
+        <li><a href="foda.html">F.O.D.A</a></li>
+        <li><a href="reflexion.html">Reflexión</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <h1 class="hero-title" style="font-size:3rem; margin-bottom:1rem;">Proyecto <span class="gradient-text">Integrador</span></h1>
+      <p class="section-subtitle" style="margin-bottom:0;">Experimenta en vivo el funcionamiento de la red social interactiva desarrollada durante el primer año académico.</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SIMULATOR SECTION
+       ========================================== -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="simulator-layout">
+        <div class="simulator-info reveal-element revealed">
+          <h3>Red Social Tipo "FriendSpace"</h3>
+          <p>
+            Esta demostración emula en tiempo real la lógica programada para el proyecto integrador. El código original utilizaba MySQL para la base de datos de usuarios y amigos, y HTML/CSS para la capa visual.
+          </p>
+          <p>
+            El desarrollo se enfocó en comprender el flujo completo de una aplicación interactiva que realiza consultas relacionales en la base de datos a partir de interacciones directas del usuario final.
+          </p>
+          <p style="margin-bottom:1.5rem;">
+            <strong>Prueba las siguientes características en el mockup del teléfono:</strong>
+          </p>
+          <ul class="simulator-features">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>Aceptar Amigos:</strong> Simula la gestión de amistad con solicitudes entrantes en la barra superior del header.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>Escribir y Publicar:</strong> Escribe una publicación en el campo de texto y haz clic en "Publicar" para agregarla dinámicamente en el feed.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>Reacciones Interactivas:</strong> Presiona el botón de "Me gusta" para interactuar y ver las actualizaciones lógicas de los contadores.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>Sección de Comentarios:</strong> Redacta comentarios directamente y presiona Enter para verlos renderizados al instante.</div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="simulator-visual">
+          <div class="mockup-browser">
+            <div class="mockup-header">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+              <div class="mockup-address">localhost:3000/friendspace-clone</div>
+            </div>
+            
+            <!-- FB APP INTERACTIVE WRAPPER -->
+            <div class="fb-container">
+              <!-- FB Navigation -->
+              <div class="fb-header">
+                <span class="fb-logo">FriendSpace</span>
+                <div class="fb-header-right">
+                  <button id="fb-friend-btn" class="fb-btn-friend">
+                    <i class="fa-solid fa-user-plus"></i> <span id="fb-friend-status">Aceptar Solicitud</span>
+                  </button>
+                  <div class="fb-avatar">JC</div>
+                </div>
+              </div>
+
+              <!-- FB Scrollable Feed -->
+              <div class="fb-feed" id="fb-feed">
+                <!-- Composer Card -->
+                <div class="fb-composer">
+                  <div class="fb-composer-top">
+                    <div class="fb-avatar">JC</div>
+                    <input type="text" id="fb-input" class="fb-composer-input" placeholder="¿Qué estás pensando, Juan Carlos?">
+                  </div>
+                  <button id="fb-post-btn" class="fb-composer-btn">Publicar</button>
+                </div>
+
+                <!-- Default Static Post 1 -->
+                <div class="fb-post" data-id="post-1">
+                  <div class="fb-post-header">
+                    <div class="fb-avatar" style="background:#0ea5e9">AP</div>
+                    <div class="fb-post-info">
+                      <span class="fb-post-author">Académico Programación</span>
+                      <span class="fb-post-time">Hace 2 horas</span>
+                    </div>
+                  </div>
+                  <div class="fb-post-content">¡Excelente avance con el Portafolio de Título, Juan Carlos! La estructura de base de datos relacional en MySQL está muy bien planteada para soportar las interacciones de amigos y comentarios.</div>
+                  <div class="fb-post-stats">
+                    <span><i class="fa-solid fa-thumbs-up" style="color:#1877f2"></i> <span class="like-count" id="like-count-1">12</span> personas</span>
+                    <span class="comment-count-label">2 comentarios</span>
+                  </div>
+                  <div class="fb-post-actions">
+                    <button class="fb-action-btn like-btn" data-target="1">
+                      <i class="fa-regular fa-thumbs-up"></i> Me gusta
+                    </button>
+                    <button class="fb-action-btn comment-focus-btn">
+                      <i class="fa-regular fa-comment"></i> Comentar
+                    </button>
+                  </div>
+                  <!-- Comments List -->
+                  <div class="fb-comments">
+                    <div class="fb-comment">
+                      <div class="fb-avatar" style="background:#7928ca; width:24px; height:24px; font-size:0.6rem">PM</div>
+                      <div class="fb-comment-bubble">
+                        <div class="fb-comment-author">Pedro Muñoz</div>
+                        <div>Me gusta la rapidez con que carga y registra las interacciones. ¡Felicidades!</div>
+                      </div>
+                    </div>
+                    <!-- New Comments Container -->
+                    <div class="fb-new-comments" id="new-comments-1"></div>
+                    <!-- Input Comment -->
+                    <div class="fb-comment-input-area">
+                      <input type="text" class="fb-comment-input" data-post-id="1" placeholder="Escribe un comentario y presiona Enter...">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="camino.html">Camino Académico</a>
+        <a href="proyecto.html">Proyecto</a>
+        <a href="foda.html">F.O.D.A</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Juan Carlos Feliu Diaz. Todos los derechos reservados. Portafolio de Título - Analista Programador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>
+
+
+
+
+

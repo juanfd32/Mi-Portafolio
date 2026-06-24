@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requerimientos y Roles | Portafolio Juan Carlos Feliu Diaz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    .subpage-hero {
+      padding: 8rem 0 4rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="perfil.html">Perfil de Egreso</a></li>
+        <li><a href="camino.html">Camino Académico</a></li>
+        <li><a href="proyecto.html">Proyecto Integrador</a></li>
+        <li><a href="requerimientos.html" class="active">Requerimientos y Roles</a></li>
+        <li><a href="foda.html">F.O.D.A</a></li>
+        <li><a href="reflexion.html">Reflexión</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <h1 class="hero-title" style="font-size:3rem; margin-bottom:1rem;">Requerimientos y <span class="gradient-text-cyan">Roles</span></h1>
+      <p class="section-subtitle" style="margin-bottom:0;">Explora interactivamente la estructura organizativa de los proyectos y la clasificación técnica de requerimientos aprendida en clases.</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       ROLES & REQUIREMENTS EXPLORER
+       ========================================== -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="req-grid">
+        <!-- Roles Selection Panel -->
+        <div class="roles-panel reveal-element revealed">
+          <h3 style="font-size:1.4rem; margin-bottom:1rem; color:#fff;"><i class="fa-solid fa-users"></i> Roles en el Software</h3>
+          
+          <div class="card-glass role-selector-card active" data-role="pm">
+            <div class="role-header-line">
+              <h4>Director de Proyecto</h4>
+              <span class="role-badge leader">Leader</span>
+            </div>
+            <p class="role-desc-short">Project Manager: Planificación, recursos y control de riesgos.</p>
+          </div>
+
+          <div class="card-glass role-selector-card" data-role="sponsor">
+            <div class="role-header-line">
+              <h4>Patrocinador</h4>
+              <span class="role-badge sponsor">Sponsor</span>
+            </div>
+            <p class="role-desc-short">Sponsor: Financia el proyecto y valida objetivos de negocio.</p>
+          </div>
+
+          <div class="card-glass role-selector-card" data-role="scrum">
+            <div class="role-header-line">
+              <h4>Líder Técnico</h4>
+              <span class="role-badge leader">Scrum Master</span>
+            </div>
+            <p class="role-desc-short">Scrum Master: Elimina barreras y facilita el avance técnico.</p>
+          </div>
+
+          <div class="card-glass role-selector-card" data-role="team">
+            <div class="role-header-line">
+              <h4>Equipo de Trabajo</h4>
+              <span class="role-badge op">Operational</span>
+            </div>
+            <p class="role-desc-short">Miembros: Analistas, diseñadores y programadores.</p>
+          </div>
+
+          <div class="card-glass role-selector-card" data-role="users">
+            <div class="role-header-line">
+              <h4>Usuarios Finales</h4>
+              <span class="role-badge ext">External</span>
+            </div>
+            <p class="role-desc-short">End Users: Personas que utilizarán el sistema entregado.</p>
+          </div>
+        </div>
+
+        <!-- Detail Panel -->
+        <div class="card-glass req-display-box reveal-element">
+          <div>
+            <div class="req-display-header">
+              <div class="badge-container">
+                <span id="req-role-badge" class="role-badge leader">Leader</span>
+              </div>
+              <h3 id="req-role-title">Director de Proyecto (Project Manager)</h3>
+            </div>
+            <div class="req-display-body" id="req-role-description">
+              <p>El Director de Proyecto es el líder principal de la iniciativa. Se encarga de coordinar la planificación general, asignar responsabilidades, controlar el presupuesto y monitorear los riesgos del proyecto.</p>
+              <h5>Responsabilidades Clave:</h5>
+              <ul>
+                <li>Estimar tiempos de desarrollo realistas.</li>
+                <li>Monitorear la ruta crítica del proyecto para evitar demoras.</li>
+                <li>Mitigar riesgos técnicos o humanos asociados al alcance.</li>
+                <li>Establecer comunicación fluida con el Patrocinador del proyecto.</li>
+              </ul>
+            </div>
+          </div>
+          <div style="font-size:0.8rem; color:var(--text-dark); text-align:right; margin-top:2rem;">
+            * Información extraída de las asignaturas Gestión de Requerimientos I y II.
+          </div>
+        </div>
+      </div>
+
+      <!-- Functional vs Non Functional requirements lists toggles -->
+      <div class="req-type-container">
+        <div class="req-type-tabs">
+          <button class="req-type-btn active" data-type="funcionales">Requerimientos Funcionales</button>
+          <button class="req-type-btn" data-type="no-funcionales">Requerimientos No Funcionales (Calidad)</button>
+        </div>
+
+        <div class="req-type-lists" id="req-type-lists">
+          <div class="req-list-block">
+            <h4><i class="fa-solid fa-list-check"></i> Definición</h4>
+            <p style="font-size:0.9rem; margin-bottom:1rem;">Describen los servicios o funciones específicas que el sistema debe ejecutar de forma obligatoria para dar respuesta a las acciones del usuario final.</p>
+            <ul>
+              <li>Registrar usuarios nuevos en la base de datos MySQL.</li>
+              <li>Iniciar sesión mediante validación de credenciales.</li>
+              <li>Generar reportes consolidados del estado de tareas.</li>
+              <li>Realizar búsquedas indexadas de perfiles o amigos.</li>
+            </ul>
+          </div>
+          <div class="req-list-block">
+            <h4><i class="fa-solid fa-diagram-project"></i> Modelamiento UML Asociado</h4>
+            <p style="font-size:0.9rem; margin-bottom:1rem;">Los requerimientos funcionales se modelan mediante casos de uso para mapear las interacciones lógicas entre los actores y el sistema de software:</p>
+            <ul>
+              <li><strong>Diagramas de Casos de Uso:</strong> Mapean objetivos de actores.</li>
+              <li><strong>Diagramas de Secuencia:</strong> Ilustran mensajes en orden temporal.</li>
+              <li><strong>Diagramas de Actividades:</strong> Describen flujos operacionales.</li>
+              <li><strong>Diagramas de Clases:</strong> Definen la estructura y objetos en código.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="camino.html">Camino Académico</a>
+        <a href="proyecto.html">Proyecto</a>
+        <a href="foda.html">F.O.D.A</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Juan Carlos Feliu Diaz. Todos los derechos reservados. Portafolio de Título - Analista Programador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>
+
+
+
+

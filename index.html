@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Portafolio de Título Juan Carlos Feliu Diaz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    /* Custom Home Page Shortcuts Grid */
+    .shortcuts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    .shortcut-card {
+      padding: 2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+    }
+    .shortcut-card i {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .shortcut-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .shortcut-card p {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .shortcut-link {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="perfil.html">Perfil de Egreso</a></li>
+        <li><a href="camino.html">Camino Académico</a></li>
+        <li><a href="proyecto.html">Proyecto Integrador</a></li>
+        <li><a href="requerimientos.html">Requerimientos y Roles</a></li>
+        <li><a href="foda.html">F.O.D.A</a></li>
+        <li><a href="reflexion.html">Reflexión</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> Portafolio de Título 2026
+          </div>
+          <h1 class="hero-title">Juan Carlos <br><span class="gradient-text">Feliu Diaz</span></h1>
+          <p class="hero-description">
+            Bienvenido a mi portafolio profesional de <strong>Analista Programador Computacional</strong>. Aquí podrás explorar los conocimientos, habilidades y competencias adquiridas a lo largo de mis cuatro semestres de formación de manera estructurada y modular.
+          </p>
+          <div class="hero-actions">
+            <a href="camino.html" class="btn btn-primary">Ver Camino Académico <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="proyecto.html" class="btn btn-secondary">Simulador de Proyecto <i class="fa-solid fa-laptop-code"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="card-glass profile-card">
+            <div class="profile-avatar-container">
+              <img src="assets/img/profile.jpg" alt="Juan Carlos Feliu Diaz" class="profile-avatar">
+            </div>
+            <h3>Juan Carlos Feliu Diaz</h3>
+            <p class="tagline">Analista Programador Computacional</p>
+            <div class="profile-info">
+              <div class="profile-info-item">
+                <span>Carrera:</span>
+                <span>Analista Programador</span>
+              </div>
+              <div class="profile-info-item">
+                <span>Egreso:</span>
+                <span>2026</span>
+              </div>
+              <div class="profile-info-item">
+                <span>Institución:</span>
+                <a href="https://www.cftestatalrm.cl/" target="_blank" style="color: var(--primary); text-decoration: none;">CFT Estatal RM <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i></a>
+              </div>
+              <div class="profile-info-item">
+                <span>Estado:</span>
+                <span style="color: var(--primary);"><i class="fa-solid fa-check-double"></i> Práctica Completada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Navigation Grid -->
+      <div class="shortcuts-grid">
+        <!-- Card 1: Perfil de Egreso -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-user-graduate"></i>
+            <h3>Perfil de Egreso</h3>
+            <p>Conoce mis competencias clave en programación orientada a objetos, bases de datos y desarrollo web.</p>
+          </div>
+          <a href="perfil.html" class="shortcut-link">Ver Perfil <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 2: Camino Académico -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-route"></i>
+            <h3>Camino Académico</h3>
+            <p>Una revisión cronológica semestre por semestre de mis aprendizajes, desafíos y asignaturas.</p>
+          </div>
+          <a href="camino.html" class="shortcut-link">Ver Camino <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 3: Proyecto Integrador -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Proyecto Integrador</h3>
+            <p>Explora mi simulación interactiva de red social tipo FriendSpace conectada a VSC y bases de datos MySQL.</p>
+          </div>
+          <a href="proyecto.html" class="shortcut-link">Ver Proyecto <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 4: Requerimientos y Roles -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Requerimientos y Roles</h3>
+            <p>El modelamiento UML y la estructura organizativa de roles de desarrollo de software.</p>
+          </div>
+          <a href="requerimientos.html" class="shortcut-link">Ver Requerimientos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 5: FODA -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3>Análisis F.O.D.A</h3>
+            <p>Evaluación de mis fortalezas, oportunidades, debilidades y amenazas profesionales.</p>
+          </div>
+          <a href="foda.html" class="shortcut-link">Ver F.O.D.A <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 6: Reflexión -->
+        <div class="card-glass shortcut-card reveal-element">
+          <div>
+            <i class="fa-solid fa-comments"></i>
+            <h3>Reflexión y Contacto</h3>
+            <p>Mi madurez profesional del desarrollo de software y formulario de contacto directo.</p>
+          </div>
+          <a href="reflexion.html" class="shortcut-link">Ver Reflexión <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="camino.html">Camino Académico</a>
+        <a href="proyecto.html">Proyecto</a>
+        <a href="foda.html">F.O.D.A</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Juan Carlos Feliu Diaz. Todos los derechos reservados. Portafolio de Título - Analista Programador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camino Académico | Portafolio Juan Carlos Feliu Diaz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    .subpage-hero {
+      padding: 8rem 0 4rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="perfil.html">Perfil de Egreso</a></li>
+        <li><a href="camino.html" class="active">Camino Académico</a></li>
+        <li><a href="proyecto.html">Proyecto Integrador</a></li>
+        <li><a href="requerimientos.html">Requerimientos y Roles</a></li>
+        <li><a href="foda.html">F.O.D.A</a></li>
+        <li><a href="reflexion.html">Reflexión</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <h1 class="hero-title" style="font-size:3rem; margin-bottom:1rem;">El Camino <span class="gradient-text">Académico</span></h1>
+      <p class="section-subtitle" style="margin-bottom:0;">Una revisión detallada de los conocimientos adquiridos, desafíos superados y proyectos realizados a lo largo de la carrera.</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       TIMELINE SECTION
+       ========================================== -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="timeline-controls">
+        <button class="tab-btn active" data-target="semestres-1-2">
+          <i class="fa-solid fa-laptop-code tab-icon-3d"></i>
+          <div class="tab-text">
+            <span class="tab-title">Primer Año</span>
+            <span class="tab-subtitle">Semestres 1 y 2</span>
+          </div>
+        </button>
+        <button class="tab-btn" data-target="semestres-3-4">
+          <i class="fa-solid fa-cubes tab-icon-3d"></i>
+          <div class="tab-text">
+            <span class="tab-title">Segundo Año</span>
+            <span class="tab-subtitle">Semestres 3 y 4</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- SEMESTRES 1 y 2 CONTENT -->
+      <div id="semestres-1-2" class="timeline-container active">
+        <!-- Item 1: Sistemas y Herramientas -->
+        <div class="timeline-item reveal-element revealed">
+          <div class="timeline-content">
+            <span class="timeline-tag">Sistemas y Herramientas</span>
+            <h3 class="timeline-title">Administración de Entornos y DOS</h3>
+            <p class="timeline-desc">
+              El manejo de entornos a nivel de consola como DOS me permitió comprender en profundidad el funcionamiento interno de los sistemas computacionales. Esta competencia es vital para la capacidad de instalar, configurar y administrar de manera profesional los entornos tecnológicos requeridos en cualquier equipo de desarrollo.
+            </p>
+            <div class="timeline-highlight">
+              "Lo que sí quedó al debe fue la virtualización, la cual, por motivos de compatibilidad de los equipos disponibles, no pudimos ver bien en su funcionamiento completo."
+            </div>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/dos-comandos.png" alt="Comandos MS-DOS">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Referencia de comandos principales de MS-DOS: Cls, Dir, Copy, Del, Cd, Format y más.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Programación -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Programación</span>
+            <h3 class="timeline-title">Lógica con Python y JavaScript</h3>
+            <p class="timeline-desc">
+              El aprendizaje de Python y JavaScript fortaleció significativamente mi lógica computacional y mi habilidad para estructurar algoritmos complejos. Estudiar estructuras de control de flujo y los fundamentos de la programación orientada a objetos (POO) me dotó de las bases necesarias para escribir código organizado, limpio y funcional.
+            </p>
+            <div class="timeline-highlight">
+              "Me habría gustado ver más a profundidad Python. Creo que vimos las funciones básicas y, al no contar con conocimientos previos, me faltó comprender mejor la lógica de la programación orientada a objetos en este lenguaje."
+            </div>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/python-js.png" alt="Python VS JavaScript">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Python vs JavaScript: dos lenguajes poderosos con usos complementarios en el desarrollo de software.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Desarrollo Web -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Desarrollo Web</span>
+            <h3 class="timeline-title">Interfaces y Maquetación (HTML/CSS)</h3>
+            <p class="timeline-desc">
+              La maquetación utilizando HTML y CSS estructuró mis bases sobre el diseño de interfaces web responsivas. Comprendí la importancia de la experiencia de usuario (UX/UI), asegurándome de que las soluciones digitales cuenten con una presentación visual organizada, accesible y adaptada a las necesidades del cliente.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/html-css.png" alt="HTML y CSS Infografía">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Ventajas y características de HTML5 y CSS3: estilización, responsividad, accesibilidad e integración.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Bases de Datos -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Bases de Datos</span>
+            <h3 class="timeline-title">Bases de Datos Relacionales (MySQL)</h3>
+            <p class="timeline-desc">
+              La gestión estructurada de datos a través de MySQL me otorgó destrezas indispensables en la creación de esquemas relacionales, la optimización de consultas SQL y la integridad referencial de los datos. También abordamos SQL Server, el cual presentaba una mayor complejidad, siendo MySQL mi herramienta principal de uso.
+            </p>
+            <div class="timeline-highlight">
+              "Me habría gustado explorar tipos de bases de datos no relacionales como MongoDB, Cassandra, etc., las cuales por limitantes de tiempo no alcanzamos a abordar con detalle."
+            </div>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/db-schema2.png" alt="Diagrama Entidad-Relación MySQL">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Diagrama ER con tablas usuarios, publicaciones, comentarios y reacciones con sus relaciones (PK/FK).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Proyecto Integrador -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Proyecto Integrador Semestral</span>
+            <h3 class="timeline-title">Caso Práctico: Implementación de Red Social</h3>
+            <p class="timeline-desc">
+              Como hito práctico del primer año, integré todas estas herramientas en un proyecto real: una red social similar a FriendSpace. Con Visual Studio Code para el desarrollo de código y MySQL para la persistencia, implementé funciones avanzadas que validan mi capacidad técnica e integradora en escenarios de interacción de usuarios.
+            </p>
+            <p class="timeline-desc" style="font-size:0.95rem; margin-top:0.5rem;">
+              Puedes experimentar este proyecto de forma interactiva en la página dedicada: <a href="proyecto.html" class="gradient-text-cyan" style="font-weight:600;">Ir al Simulador de Red Social <i class="fa-solid fa-arrow-right"></i></a>.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/db-schema.png" alt="Diagrama de base de datos FriendSpace">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Diagrama Entidad-Relación (ER) de la base de datos MySQL del Proyecto FriendSpace.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEMESTRES 3 y 4 CONTENT -->
+      <div id="semestres-3-4" class="timeline-container">
+        <!-- Item 1: Gestión de Proyectos -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Taller de Gestión</span>
+            <h3 class="timeline-title">Gestión de Proyectos de Software</h3>
+            <p class="timeline-desc">
+              Adquirí metodologías formales para planificar y estructurar el ciclo de vida del software, controlando variables críticas como objetivos, alcance, recursos y riesgos. Además, fortalecí habilidades directivas como la coordinación y la organización de tareas en equipos de desarrollo.
+            </p>
+            <div class="timeline-highlight">
+              "Una de mis principales dificultades fue estimar de manera realista los tiempos de desarrollo. Al principio tendía a subestimar el esfuerzo necesario, pero a través de la práctica y proyectos grupales comprendí el valor del control de tareas para evitar retrasos."
+            </div>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/image7.png" alt="Gestión de proyectos">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Planificación temporal, estimaciones y cronogramas de hitos de desarrollo.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: IA -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Tecnologías Emergentes</span>
+            <h3 class="timeline-title">Inteligencia Artificial aplicada al Desarrollo</h3>
+            <p class="timeline-desc">
+              Utilizamos la IA como un copiloto de programación para eficientar el desarrollo, optimizando tiempos de codificación manual. ChatGPT me ayudó inicialmente a entender cómo estructurar la lógica del código, y posteriormente Kimi me permitió optimizar flujos gracias a prompts bien definidos.
+            </p>
+            <div class="timeline-highlight">
+              "El surgimiento de versiones de pago acortó las capacidades gratuitas diarias. Si no contabas con recursos de suscripción profesional, los tiempos de desarrollo de trabajos muy intensos se alargaban significativamente."
+            </div>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container" style="display: flex; flex-direction: column; gap: 0.5rem; border: none; box-shadow: none; background: transparent;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                <img src="assets/img/image8.png" alt="AI Agent Icon 1" style="border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #090e1a;">
+                <img src="assets/img/image9.png" alt="AI Agent Icon 2" style="border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #090e1a;">
+              </div>
+              <div class="img-caption" style="border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                <i class="fa-solid fa-circle-info"></i> Herramientas de IA utilizadas como agentes de asistencia técnica.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Gestión de Requerimientos -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Ingeniería de Software</span>
+            <h3 class="timeline-title">Gestión de Requerimientos I y II</h3>
+            <p class="timeline-desc">
+              Comprendí que la base de todo software exitoso radica en comprender plenamente al cliente antes de escribir una sola línea de código. Aprendimos a identificar, analizar y documentar minuciosamente los requisitos del negocio, mitigando el riesgo de errores de diseño y costos extra.
+            </p>
+            <p class="timeline-desc">
+              Estudiamos técnicas de levantamiento de información como entrevistas, encuestas, observaciones y análisis documental para asegurar la alineación entre la necesidad real y el desarrollo técnico.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/image10.png" alt="Gestión de Requerimientos">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Ciclo de vida y análisis estructurado del levantamiento de requerimientos.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Roles del Proyecto -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Ingeniería de Software</span>
+            <h3 class="timeline-title">Roles y Actores Organizacionales</h3>
+            <p class="timeline-desc">
+              Analizamos y definimos la estructura del equipo de trabajo y los actores clave involucrados en un proyecto de software (Sponsor, Project Manager, Scrum Master, Miembros de equipo, Usuarios final, Proveedores).
+            </p>
+            <p class="timeline-desc" style="font-size:0.95rem; margin-top:0.5rem;">
+              Puedes profundizar en los roles y sus responsabilidades en nuestra sección de: <a href="requerimientos.html" class="gradient-text-cyan" style="font-weight:600;">Explorador de Roles y Requerimientos <i class="fa-solid fa-arrow-right"></i></a>.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/image11.png" alt="Roles de desarrollo">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Diagramas de actores, roles y responsabilidades organizacionales.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: UML -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Modelamiento y Arquitectura</span>
+            <h3 class="timeline-title">Modelamiento UML Completo</h3>
+            <p class="timeline-desc">
+              Profundizamos en el uso del Lenguaje Unificado de Modelado (UML) como pilar esencial para el diseño conceptual y lógico del sistema. Nos entrenamos en estructurar múltiples puntos de vista mediante diagramas específicos: de Casos de Uso (interacción del usuario), Actividades (flujo del proceso), Secuencia (intercambio de mensajes) y Clases (arquitectura orientada a objetos).
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <div class="img-container">
+              <img src="assets/img/image12.jpeg" alt="UML Diagrams">
+              <div class="img-caption">
+                <i class="fa-solid fa-circle-info"></i> Modelamiento UML y estructura conceptual de arquitectura de clases.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Trazabilidad y Cambios -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-content">
+            <span class="timeline-tag">Calidad de Software</span>
+            <h3 class="timeline-title">Trazabilidad y Control de Cambios</h3>
+            <p class="timeline-desc">
+              Estudiamos la trazabilidad de requerimientos para vincular cada requisito del cliente con el componente del sistema correspondiente, agilizando el control del desarrollo. Asimismo, dominamos la gestión de cambios: estructurar procesos de registro, evaluar impactos en costos y tiempos, analizar riesgos y mantener la documentación oficial alineada ante modificaciones del cliente.
+            </p>
+          </div>
+          <div class="timeline-visual" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%;">
+              <div class="img-container" style="margin:0;">
+                <img src="assets/img/image13.png" alt="Trazabilidad">
+              </div>
+              <div class="img-container" style="margin:0;">
+                <img src="assets/img/image14.png" alt="Gestión de cambios">
+              </div>
+            </div>
+            <div class="img-caption" style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); width: 100%;">
+              <i class="fa-solid fa-circle-info"></i> Matrices de trazabilidad técnica e ingeniería de control de cambios.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" style="color: #fff;"><i class="fa-solid fa-cube logo-icon-3d"></i> Mi Portafolio</a>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="camino.html">Camino Académico</a>
+        <a href="proyecto.html">Proyecto</a>
+        <a href="foda.html">F.O.D.A</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Juan Carlos Feliu Diaz. Todos los derechos reservados. Portafolio de Título - Analista Programador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>
+
+
+
+
+
