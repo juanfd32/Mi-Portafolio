@@ -549,8 +549,154 @@ function initPortfolio() {
 
   // Cerrar con tecla Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Escape') {
+      closeLightbox();
+      closeDownloadModal();
+    }
   });
+
+  // Click en imágenes dentro de .doc-img-wrapper
+  document.querySelectorAll('.doc-img-wrapper img').forEach(img => {
+    img.addEventListener('click', () => {
+      const figure = img.closest('.doc-figure');
+      const captionEl = figure ? figure.querySelector('.doc-figure-caption') : null;
+      const captionText = captionEl ? captionEl.textContent.trim() : (img.alt || '');
+      openLightbox(img.src, img.alt, captionText);
+    });
+  });
+
+  // Click en el Cuadro de Título Oficial para zoom
+  document.querySelectorAll('.diploma-outer-frame').forEach(frame => {
+    frame.addEventListener('click', () => {
+      openLightbox(
+        'assets/img/certificado-titulo.png',
+        'Certificado de Título Profesional - Juan Carlos Feliu Diaz',
+        'Certificado Oficial de Título de Técnico de Nivel Superior en Analista Programador Computacional (Calificación 6,0)'
+      );
+    });
+  });
+
+  // ==========================================
+  // PASSWORD PROTECTED DOWNLOAD MODAL ("Matias22")
+  // ==========================================
+  const downloadBtns = document.querySelectorAll('.trigger-download-modal');
+  const secModal = document.getElementById('security-download-modal');
+  const secCloseBtn = document.getElementById('sec-modal-close-btn');
+  const secCancelBtn = document.getElementById('sec-modal-cancel-btn');
+  const secSubmitBtn = document.getElementById('sec-modal-submit-btn');
+  const secPasswordInput = document.getElementById('sec-password-input');
+  const secToggleVisibility = document.getElementById('sec-toggle-visibility');
+  const secFeedback = document.getElementById('sec-feedback');
+  const secCard = document.querySelector('.sec-modal-card');
+
+  const CORRECT_PASSWORD = 'Matias22';
+  const DOCX_URL = 'assets/docs/PORTAFOLIO_DE_TITULO_Juan_Carlos_Feliu_Diaz.docx';
+
+  function openDownloadModal() {
+    if (!secModal) return;
+    secModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (secPasswordInput) {
+      secPasswordInput.value = '';
+      secPasswordInput.type = 'password';
+      if (secToggleVisibility) {
+        secToggleVisibility.innerHTML = '<i class="fa-solid fa-eye"></i>';
+      }
+      setTimeout(() => secPasswordInput.focus(), 150);
+    }
+    if (secFeedback) {
+      secFeedback.className = 'sec-feedback';
+      secFeedback.innerHTML = '';
+    }
+  }
+
+  function closeDownloadModal() {
+    if (!secModal) return;
+    secModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function handlePasswordVerification() {
+    if (!secPasswordInput) return;
+    const entered = secPasswordInput.value.trim();
+
+    if (entered === CORRECT_PASSWORD) {
+      secFeedback.className = 'sec-feedback success';
+      secFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> ¡Contraseña correcta! Iniciando descarga...';
+      
+      const downloadLink = document.createElement('a');
+      downloadLink.href = DOCX_URL;
+      downloadLink.download = 'PORTAFOLIO_DE_TITULO_Juan_Carlos_Feliu_Diaz.docx';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      setTimeout(() => {
+        closeDownloadModal();
+      }, 1600);
+    } else {
+      secFeedback.className = 'sec-feedback error';
+      secFeedback.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Contraseña incorrecta. Intente nuevamente.';
+      if (secCard) {
+        secCard.classList.remove('sec-shake');
+        void secCard.offsetWidth; // reflow
+        secCard.classList.add('sec-shake');
+      }
+      secPasswordInput.focus();
+      secPasswordInput.select();
+    }
+  }
+
+  if (downloadBtns) {
+    downloadBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDownloadModal();
+      });
+    });
+  }
+
+  if (secCloseBtn) secCloseBtn.addEventListener('click', closeDownloadModal);
+  if (secCancelBtn) secCancelBtn.addEventListener('click', closeDownloadModal);
+
+  if (secModal) {
+    secModal.addEventListener('click', (e) => {
+      if (e.target === secModal) closeDownloadModal();
+    });
+  }
+
+  if (secSubmitBtn) {
+    secSubmitBtn.addEventListener('click', handlePasswordVerification);
+  }
+
+  if (secPasswordInput) {
+    secPasswordInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handlePasswordVerification();
+      }
+    });
+  }
+
+  if (secToggleVisibility && secPasswordInput) {
+    secToggleVisibility.addEventListener('click', () => {
+      const isPass = secPasswordInput.type === 'password';
+      secPasswordInput.type = isPass ? 'text' : 'password';
+      secToggleVisibility.innerHTML = isPass ? '<i class="fa-solid fa-eye-slash"></i>' : '<i class="fa-solid fa-eye"></i>';
+    });
+  }
+
+  // Reading progress bar for document viewer
+  const readingBar = document.getElementById('reading-progress-bar');
+  if (readingBar) {
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        const scrolled = (window.scrollY / docHeight) * 100;
+        readingBar.style.width = scrolled + '%';
+      }
+    });
+  }
 
 
   // ==========================================
